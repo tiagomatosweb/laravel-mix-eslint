@@ -1,0 +1,12 @@
+@function rem($pxval) {
+    $em-base: 16px !default;
+    @if not unitless($pxval) {
+        $pxval: strip-unit($pxval);
+    }
+    $base: $em-base;
+    @if not unitless($base) {
+        $base: strip-unit($base);
+    }
+
+    @return ($pxval / $base) * 1rem;
+}

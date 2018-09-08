@@ -1,0 +1,22 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    background-color: #e8eef1;
+}
+
+a {
+    outline: none;
+    transition: all .2s ease;
+}
+
+
+.ninja {
+    color: black;
+    visibility: hidden;
+    animation-duration: 0.00001s;
+}
