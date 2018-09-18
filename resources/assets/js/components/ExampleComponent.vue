@@ -17,6 +17,10 @@
 <script>
     export default {
         mounted() {
+            console.log(apiUrl);
+            apiUrl.user.getUsers().then((response) => {
+                console.log(response.data);
+            });
             console.log('Component mounted.');
         },
     };

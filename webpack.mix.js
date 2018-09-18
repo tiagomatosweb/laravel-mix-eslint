@@ -1,4 +1,5 @@
 let mix = require('laravel-mix');
+const webpack = require('webpack');
 
 /*
  |--------------------------------------------------------------------------
@@ -25,5 +26,20 @@ mix.js('resources/assets/js/app.js', 'public/js')
                     },
                 }
             ]
-        }
+        },
+        resolve: {
+            alias: {
+                'apiUrl': __dirname + '/resources/assets/js/api',
+            },
+        },
+        plugins: [
+            new webpack.ProvidePlugin({
+                axios: 'axios',
+                apiUrl: 'apiUrl',
+            }),
+        ],
+    })
+    .browserSync({
+        proxy: 'laravel.test',
+        port: 3010,
     });

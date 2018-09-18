@@ -22,4 +22,8 @@ module.exports = {
         "space-before-function-paren": ["error", "never"],
         "prefer-destructuring": 'off',
     },
+    globals: {
+        apiUrl: true,
+        axios: true,
+    },
 };
